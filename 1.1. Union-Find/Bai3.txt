@@ -1,0 +1,38 @@
+cấu trúc cây hiện tại:
+cây gốc 4 (sz=8): {4, 0, 1, 2, 3, 5, 6, 7}
+cây gốc 8 (sz=2): {8, 9}
+
+quy tắc weighted quick-union:
+union(p,q) chỉ nối gốc với gốc
+cây nhỏ treo vào cây lớn
+nếu bằng nhau: gốc cây chứa q treo vào gốc cây chứa p
+(Xét từng cặp giả định đây là lệnh union cuối cùng, p và q phải nằm ở 2 tập rời nhau)
+
+cặp (0, 4): không hợp lệ
+trước lệnh: gốc(0)=0 (sz=4), gốc(4)=4 (sz=4) -> bằng nhau -> gốc chứa q(4) treo vào gốc chứa p(0) -> liên kết 4->0
+sơ đồ thực tế có 0->4, không phải 4->0 -> loại
+
+cặp (2, 3): không hợp lệ
+liên kết 3->2 tồn tại nhưng 2 không phải gốc -> loại
+
+cặp (4, 0): hợp lệ
+trước lệnh: gốc(4)=4 (sz=4), gốc(0)=0 (sz=4) -> bằng nhau
+-> gốc chứa q(0) treo vào gốc chứa p(4) -> liên kết 0->4 (khớp với sơ đồ)
+
+cặp (4, 5): hợp lệ
+trước lệnh: gốc(4)=4 (sz=6), gốc(5)=5 (sz=2) -> cây 5 nhỏ hơn -> 5->4 (khớp với sơ đồ)
+
+cặp (5, 0): hợp lệ
+trước lệnh: gốc(5)=5 (sz=2), gốc(0)=4 (sz=6) -> cây 5 nhỏ hơn -> 5->4 (khớp với sơ đồ)
+
+cặp (5, 7): không hợp lệ
+liên kết 7->5 tồn tại nhưng 5 không phải gốc hiện tại -> loại
+
+cặp (6, 4): hợp lệ
+trước lệnh: gốc(6)=6 (sz=1), gốc(4)=4 (sz=7) -> cây 6 nhỏ hơn -> 6->4 (khớp với sơ đồ)
+
+cặp (8, 9): hợp lệ
+trước lệnh: gốc(8)=8 (sz=1), gốc(9)=9 (sz=1) -> bằng nhau
+-> gốc chứa q(9) treo vào gốc chứa p(8) -> liên kết 9->8 (khớp với sơ đồ)
+
+các cặp hợp lệ: (4,0), (4,5), (5,0), (6,4), (8,9)

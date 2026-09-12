@@ -1,0 +1,28 @@
+mảng parent[] cho trước:
+index:   0  1  2  3  4  5  6  7  8  9
+parent:  0  0  0  0  4  4  4  5  ?  8
+
+cây 1 - gốc 0 (sz=4): gồm {0,1,2,3}
+cây 2 - gốc 4 (sz=4): gồm {4,5,6,7}
+cây con - gốc 8 (sz=2): gồm {8,9}, vì parent[9]=8
+
+các gốc hiện tại: {0, 4, 8}
+
+quy tắc weighted quick-union:
+union(p,q) luôn nối gốc cây nhỏ vào gốc cây lớn.
+
+loại trừ các nút trung gian:
+- Nếu parent[8] = 5: Tập 5 sẽ tăng lên sz=4 (gồm {5,7,8,9}). Theo mảng, sau đó gốc 5 nối vào gốc 4.
+Điều này đòi hỏi gốc 4 lúc đó phải có sz >= 4. Nhưng thực tế gốc 4 lúc đó chỉ chứa {4,6} (sz=2) -> Vô lý
+- Nếu parent[8] thuộc {1,2,3,6,7}: Các nút này chưa từng có nhánh con, sz lớn nhất chỉ là 1.
+Cây 8 (sz=2) không thể nối vào cây nhỏ hơn nó -> Loại
+
+-> parent[8] chỉ có thể trỏ tới một trong các gốc hiện tại {0, 4, 8}
+
+kiểm tra từng trường hợp:
+
+parent[8] = 8 -> hợp lệ  (8 tự làm gốc, cây {8,9} độc lập)
+parent[8] = 0 -> hợp lệ  (0 là gốc, sz[8]=2 <= sz[0]=4)
+parent[8] = 4 -> hợp lệ  (4 là gốc, sz[8]=2 <= sz[4]=4)
+
+-> parent[8] thuộc tập hợp: {0, 4, 8}

@@ -1,0 +1,19 @@
+(a)
+Mỗi union(0,k) gộp phần tử k vào nhóm chứa 0
+Sau n-1 phép union, toàn bộ n phần tử thuộc 1 nhóm
+-> 1 thành phần liên thông
+
+(b)
+union(0,1): 1 lần, union(0,2): 2 lần,..., union(0,k): k lần
+Tổng: 1 + 2 + ... + (n-1) = n(n-1)/2 ~ (1/2)n^2
+-> ~ (1/2)n^2
+
+(c)
+Cây bị lệch thành đường thẳng: 0 -> 1 -> 2 -> ... -> n-1
+find(0) phải đi qua n-1 bước
+-> 0(n)
+
+(d)
+Mỗi phần tử k đều treo thẳng vào 0 -> cây phẳng, chiều cao 1
+find(0): 0 là gốc -> chỉ 1 lần truy cập
+-> 0(1)

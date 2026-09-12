@@ -1,0 +1,28 @@
+mảng parent[] cho trước:
+index:   0  1  2  3  4  5  6  7  8  9
+parent:  5  6  0  4  0  5  0  5  6  7
+
+toàn bộ 10 nút đều có gốc là 5, chỉ có 1 cây duy nhất.
+cấu trúc:
+                5
+              /   \
+            0       7
+          / | \     |
+         2  4   6   9
+            |  / \
+            3 1   8
+
+sz từng cây con:
+  sz[2]=1, sz[3]=1, sz[1]=1, sz[8]=1, sz[9]=1
+  sz[4]=2, sz[7]=2
+  sz[6]=3
+  sz[0]=7
+  sz[5]=10
+
+kiểm tra quy tắc link-by-size:
+quy tắc: sz[con] * 2 <= sz[cha]
+  7 -> 5:  2*2=4  <= 10  (đúng)
+  0 -> 5:  7*2=14 <= 10  (sai)
+
+liên kết 0->5 vi phạm quy tắc link-by-size vì sz[0]=7 > sz[5]/2=5
+-> không hợp lệ
