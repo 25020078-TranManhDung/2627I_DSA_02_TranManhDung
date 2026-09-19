@@ -1,0 +1,14 @@
+f(n) = n*log^2(n) + 3n*sqrt(n) - 5n
+
+Đa thức luôn tăng trưởng nhanh hơn logarit -> n*sqrt(n) (tức n^1.5) tăng trưởng nhanh hơn n*log^2(n) và n
+Ký hiệu xấp xỉ (Tilde): ~ 3n*sqrt(n)
+Bậc tăng trưởng (Big-Theta): Theta(n*sqrt(n))
+
+
+- ~ n*sqrt(n): SAI (Vì thiếu hệ số 3)
+- Theta(n*log^2 n): SAI (Sai bậc cao nhất)
+- O(n^3): ĐÚNG (Big-O là cận trên, n^3 tăng nhanh hơn n*sqrt(n))
+- O(n*sqrt(n)): ĐÚNG (Big-O bao gồm cả chính nó)
+- O(n): SAI (n tăng chậm hơn n*sqrt(n) nên không thể làm cận trên)
+- Omega(log n): ĐÚNG (Big-Omega là cận dưới, log n tăng chậm hơn n*sqrt(n))
+

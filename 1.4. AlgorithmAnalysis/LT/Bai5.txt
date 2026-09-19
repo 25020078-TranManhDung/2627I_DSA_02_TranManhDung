@@ -1,0 +1,14 @@
+Hai vòng lặp ngoài (i và j):
+i tăng từ 1 đến n, j giảm từ n về i
+Tổng số bước là cấp số cộng: n + (n-1) + ... + 1 = (n * (n+1)) / 2
+Xấp xỉ (Tilde): ~ (1/2) * n^2
+
+Vòng lặp trong cùng (k):
+k tăng từ 1 đến n, mỗi bước cộng thêm một khoảng là n/100
+Số lần lặp: n / (n/100) = 100 lần
+
+
+Nhân số bước của vòng lặp ngoài và vòng lặp trong: [(1/2) * n^2] * 100
+Xấp xỉ (Tilde): ~ 50 * n^2
+
+-> ~ 50n^2 (Lựa chọn thứ 2)

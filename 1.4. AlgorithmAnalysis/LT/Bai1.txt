@@ -1,0 +1,29 @@
+1.
+Vòng lặp tăng 2 đơn vị mỗi bước (i += 2) đến (n + 5)
+Tilde: ~ (1/2) * n
+Big Theta: Theta(n)
+
+2.
+Vòng lặp nhân đôi mỗi bước (i *= 2) đến n^3. Số bước là log2(n^3)
+Tilde: ~ 3 * log2(n)
+Big Theta: Theta(log n)
+
+3.
+Vòng lặp ngoài chạy n lần. Vòng lặp trong luôn chạy đúng 100 lần
+Tilde: ~ 100 * n
+Big Theta: Theta(n)
+
+4.
+Vòng lặp ngoài dừng lại khi i*i < n -> chạy sqrt(n) lần. Vòng lặp trong nhân 3 mỗi bước -> chạy log3(n) lần
+Tilde: ~ sqrt(n) * log3(n)
+Big Theta: Theta(sqrt(n) * log n)
+
+5.
+Vòng lặp ngoài chạy n lần. Vòng lặp trong nhân đôi mỗi bước -> chạy log2(n) lần
+Tilde: ~ n * log2(n)
+Big Theta: Theta(n * log n)
+
+6.
+2 vòng lặp đầu i, j chạy tổng cộng (n * 100) lần. 2 vòng lặp sau k, l phụ thuộc nhau tạo thành cấp số cộng: 1 + 2 + ... + n = ~ (1/2) * n^2.
+Tilde: ~ 50 * n^3
+Big Theta: Theta(n^3)

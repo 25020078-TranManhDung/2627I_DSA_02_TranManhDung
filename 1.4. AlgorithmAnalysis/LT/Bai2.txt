@@ -1,0 +1,14 @@
+Hai vòng lặp ngoài (i và j):
+i chạy từ 0 đến n^2 - 1. j chạy từ i+1 đến n^2 - 1.
+Tổng số bước là cấp số cộng: (n^2 - 1) + (n^2 - 2) + ... + 1 + 0 = (n^2 * (n^2 - 1)) / 2
+Xấp xỉ (Tilde): ~ (1/2) * n^4
+
+Vòng lặp trong cùng (k):
+Nhân đôi mỗi bước (k *= 2) đến khi đạt n^2.
+Số bước lặp: log2(n^2) = 2 * log2(n)
+Xấp xỉ (Tilde): ~ 2 * log2(n)
+
+Tổng số lần gọi hàm op(): [(1/2) * n^4] * [2 * log2(n)]
+Xấp xỉ (Tilde): ~ n^4 * log2(n)
+
+-> ~ n^4 log2(n) (Lựa chọn thứ 4)

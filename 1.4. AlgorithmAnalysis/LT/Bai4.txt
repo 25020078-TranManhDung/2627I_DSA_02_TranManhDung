@@ -1,0 +1,16 @@
+(Mô hình 64-bit: Header=16B, Ref=8B, int=4B, Padding=bội số của 8)
+
+Do class Node không có từ khóa `static` nên tính thêm 8B tham chiếu lớp ngoài.
+
+Đối tượng Node (non-static inner class):
+16B (header) + 8B (tham chiếu lớp ngoài) + 40B (5 ref: key, value, parent, left, right) + 4B (int count) = 68B.
+Padding -> 72B / Node.
+
+Đối tượng BST:
+16B (header) + 8B (ref root) + 4B (int n) = 28B.
+Padding -> 32B.
+
+Tổng bộ nhớ = 32 + 72n bytes.
+-> ~ 72n
+
+

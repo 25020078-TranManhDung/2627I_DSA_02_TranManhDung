@@ -1,0 +1,3 @@
+Bậc cao nhất: n^2 -> Hàm thuộc Theta(n^2).
+Big-O (cận trên, >= n^2): Chọn O(n^2), O(n^3).
+Big-Omega (cận dưới, <= n^2): Chọn Omega(log n), Omega(n), Omega(n^2).
