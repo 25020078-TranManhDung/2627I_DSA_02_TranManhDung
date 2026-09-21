@@ -1,0 +1,15 @@
+Để 3 điểm này nằm trên cùng một đường thẳng, độ dốc của đoạn AB phải bằng độ dốc của đoạn BC.
+Độ dốc đoạn AB được tính bằng hiệu tung độ chia hiệu hoành độ: (b^3 - a^3) chia cho (b - a).
+Theo hằng đẳng thức, sau khi rút gọn ta được: a^2 + ab + b^2.
+Tương tự, độ dốc đoạn BC sau khi rút gọn là: b^2 + bc + c^2.
+Cho hai độ dốc này bằng nhau, ta có phương trình:a^2 + ab + b^2 = b^2 + bc + c^2
+Chuyển vế và rút gọn phương trình trên, ta sẽ thu được:(a - c)(a + b + c) = 0
+Vì a và c là hai số hoàn toàn khác nhau nên phép trừ a cho c không thể bằng 0.
+Do đó, bắt buộc vế còn lại là a + b + c phải bằng 0.
+Kết luận rút ra là 3 điểm có dạng tọa độ như trên thẳng hàng khi và chỉ khi tổng hoành độ của chúng bằng 0.
+
+Dựa vào tính chất toán học trên, nếu cần giải bài toán tìm 3 số có tổng bằng 0 trong một mảng, có thể làm theo các bước sau:
+Bước 1: Với mỗi số nguyên x trong mảng, hãy tạo ra một điểm trên mặt phẳng 2D có tọa độ là (x, x^3).
+Bước 2: Đưa toàn bộ các điểm vừa tạo vào thuật toán đếm số điểm thẳng hàng.
+Bước 3: Thuật toán đếm được bao nhiêu bộ 3 điểm thẳng hàng thì đó cũng chính là số lượng bộ 3 số có tổng bằng 0 trong mảng ban đầu.
+Cách biến đổi dữ liệu này giúp chứng minh rằng bài toán tìm 3 điểm thẳng hàng có độ khó tương đương với bài toán 3-Sum.
