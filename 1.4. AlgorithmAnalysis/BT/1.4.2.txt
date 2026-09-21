@@ -1,0 +1,8 @@
+Vấn đề: Tổng 3 số nguyên lớn có thể vượt giới hạn kiểu int, gây tràn số và vô tình bằng 0 dẫn đến đếm sai
+
+Tại hàm printAll và count):
+Code gốc: if (a[i] + a[j] + a[k] == 0)
+Sửa thành: if ((long) a[i] + a[j] + a[k] == 0)
+
+Ép kiểu (long) ở đầu sẽ bắt máy tính dùng kiểu long để tính toán cả biểu thức, giúp kết quả không bị tràn
+Giữ nguyên mảng đầu vào kiểu int[] (thay vì đổi toàn bộ sang long[]) giúp tiết kiệm dung lượng bộ nhớ

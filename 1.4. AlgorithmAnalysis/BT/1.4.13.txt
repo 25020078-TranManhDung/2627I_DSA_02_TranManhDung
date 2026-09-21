@@ -1,0 +1,24 @@
+a. Accumulator
+16 (overhead) + 4 (int) + 8 (double) = 28 bytes
+Padding: 32 bytes
+
+b. Transaction
+16 (overhead) + 8 (String ref) + 8 (Date ref) + 8 (double) = 40 bytes
+Padding: 40 bytes
+
+c. FixedCapacityStackOfStrings (Kích thước mảng C, có N phần tử)
+Object Stack: 16 (overhead) + 8 (String[] ref) + 4 (int N) = 28 bytes -> Padding: 32 bytes
+Object Array: 24 (array overhead) + 8*C (C tham chiếu chuỗi) = 24 + 8C bytes
+=> 32 + (24 + 8C) = 56 + 8C bytes.
+
+d. Point2D
+16 (overhead) + 8 (double x) + 8 (double y) = 32 bytes
+
+e. Interval1D
+16 (overhead) + 8 (double min) + 8 (double max) = 32 bytes
+
+f. Interval2D
+16 (overhead) + 8 (Interval1D ref 1) + 8 (Interval1D ref 2) = 32 bytes
+
+g. java.lang.Double
+16 (overhead) + 8 (double value) = 24 bytes

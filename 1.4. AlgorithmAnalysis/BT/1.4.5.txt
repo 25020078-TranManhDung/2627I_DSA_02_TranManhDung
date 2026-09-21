@@ -1,0 +1,19 @@
+a. N + 1 ~ N
+
+b. 1 + 1/N ~ 1
+
+c. (1 + 1/N)(1 + 2/N) ~ 1
+Phân số chứa N ở mẫu số sẽ tiến về 0
+
+d. 2N^3 - 15N^2 + N ~ 2N^3
+
+e. lg(2N) / lgN ~ 1
+lg(2N) = lg2 + lgN. Khi chia cho lgN, thành phần lg2/lgN tiến về 0
+
+f. lg(N^2 + 1) / lgN ~ 2
+Xấp xỉ tử số lg(N^2 + 1) ~ lg(N^2) = 2lgN
+Sau đó 2lgN/lgN = 2
+
+g. N^100 / 2^N ~ 0
+Hàm mũ (2^N) tăng trưởng nhanh hơn đa thức (N^100) rất nhiều.
+Mẫu số to hơn tử số theo cấp số nhân nên phân số tiến về 0

@@ -1,0 +1,11 @@
+Số lần chạy của vòng lặp trong cùng (số bộ 3 phần tử) là ~ (N^3)/6
+
+Phép so sánh:
+-So sánh bằng (== 0): 1 lần mỗi bộ 3 -> ~ (N^3)/6 phép toán
+-So sánh nhỏ hơn (k < n): 1 lần mỗi bộ 3 -> ~ (N^3)/6 phép toán
+-> Tổng số phép so sánh: ~ (N^3)/3.
+
+Phép toán số học:
+-Phép cộng (a[i] + a[j] + a[k]): 2 phép cộng mỗi bộ 3 -> 2 * (N^3)/6 = (N^3)/3 phép toán
+-Phép tăng biến đếm (k++): 1 phép tăng mỗi bộ 3 -> ~ (N^3)/6 phép toán
+-> Tổng số phép toán số học: ~ (N^3)/2

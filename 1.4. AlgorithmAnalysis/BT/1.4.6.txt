@@ -1,0 +1,12 @@
+a.
+Vòng lặp ngoài chia đôi n mỗi bước. Vòng lặp trong chạy n lần
+Tổng số phép toán là: N + N/2 + N/4 + ... + 1 ~ 2*N -> bậc tăng trưởng O(N)
+
+b.
+Vòng lặp ngoài nhân đôi i mỗi bước. Vòng lặp trong chạy i lần.
+Tổng số phép toán là: 1 + 2 + 4 + ... + M ~ 2*N -> bậc tăng trưởng O(N)
+
+c. O(N log N)
+- Vòng lặp ngoài nhân đôi i mỗi bước nên số lần lặp là log2(N).
+- Vòng lặp trong chạy cố định đúng N lần (giới hạn là N, không bị ảnh hưởng bởi biến i).
+- Nhân số vòng lặp ngoài với vòng lặp trong: log2(N) * N = N log N[cite: 1].
