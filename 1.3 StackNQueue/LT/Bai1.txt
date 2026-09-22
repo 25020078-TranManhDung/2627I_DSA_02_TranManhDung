@@ -1,0 +1,14 @@
+1a.
+Lần in 1 (thao tác 3): Queue đang chứa số 1, in ra 1
+Lần in 2 (thao tác 6): Queue đang chứa số 2, 3, in ra 2 3
+Lần in 3 (thao tác 9): Queue đang chứa số 3, 4, 5, in ra 3 4 5
+Lần in 4 (thao tác 12): Queue đang chứa số 4, 5, 6, 7, in ra 4 5 6 7
+-> 1 2 3 3 4 5 4 5 6 7
+1b.
+Thao tác thêm một phần tử vào danh sách liên kết bình thường chỉ mất O(1).
+Tuy nhiên, trường hợp tồi nhất là lúc lệnh enqueue này kích hoạt nhịp tự in, thuật toán phải duyệt qua tất cả n phần tử để in ra nên tiêu tốn O(n)
+-> 0(n)
+1c.
+Tổng chi phí in toàn bộ: Lần 1 duyệt 3 phần tử, lần 2 duyệt 6 phần tử...
+Tổng số phần tử phải duyệt trong suốt quá trình là cấp số cộng 3 + 6 + 9 + ... + n tương đương O(n^2)
+O(n^2) / n -> o(n)
