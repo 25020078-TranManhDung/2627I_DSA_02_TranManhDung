@@ -1,0 +1,21 @@
+a. Hợp lệ
+
+b. Không hợp lệ
+- Lỗi ở: ... 9 0 1
+- Số 1 vào sau số 0 nên 1 đang đè lên 0. Theo luật LIFO phải lấy 1 ra trước 0
+
+c. Hợp lệ
+
+d. Hợp lệ
+
+e. Hợp lệ
+
+f. Không hợp lệ
+- Lỗi ở: ... 8 1 7 ...
+- Khi lấy 8 ra, stack đang còn [1, 2, 7] (với 7 ở đỉnh). Phải lấy 7 ra trước, không thể lấy 1
+
+g. KHÔNG HỢP LỆ
+- Lỗi ở: ... 3 0 2
+- Khi lấy 3 ra, stack đang còn [0, 2] (với 2 ở đỉnh). Phải lấy 2 ra trước, không thể lấy 0
+
+h. Hợp lệ

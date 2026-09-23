@@ -1,0 +1,4 @@
+Đoạn code làm đảo ngược hoàn toàn thứ tự các phần tử trong hàng đợi q
+
+-Vòng lặp 1: Rút toàn bộ phần tử từ Queue đẩy vào Stack. Do tính chất LIFO, phần tử vốn ở đầu Queue sẽ bị đè xuống đáy, phần tử ở cuối Queue sẽ nổi lên đỉnh Stack
+-Vòng lặp 2: Rút toàn bộ từ đỉnh Stack nạp lại vào Queue. Phần tử trên đỉnh (vốn ở cuối hàng cũ) nay được nạp vào Queue đầu tiên. Kết quả là hàng đợi mới bị lật ngược

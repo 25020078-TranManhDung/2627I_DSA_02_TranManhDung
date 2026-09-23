@@ -1,0 +1,1 @@
+In biểu diễn nhị phân của N (110010 khi N bằng 50)

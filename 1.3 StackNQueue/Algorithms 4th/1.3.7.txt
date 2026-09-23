@@ -1,0 +1,15 @@
+1. Nếu Stack dùng Linked List:
+Phần tử đỉnh luôn được quản lý bởi con trỏ `first`. Ta chỉ cần trả về dữ liệu của node này
+
+public Item peek() {
+    if (isEmpty()) throw new NoSuchElementException("Stack rỗng");
+    return first.item;
+}
+
+2. Nếu Stack dùng Mảng (Array):
+Biến n lưu tổng số phần tử. Do chỉ số mảng bắt đầu từ 0, phần tử đỉnh sẽ nằm ở vị trí n - 1
+
+public Item peek() {
+    if (isEmpty()) throw new NoSuchElementException("Stack rỗng");
+    return a[n - 1];
+}
