@@ -1,0 +1,10 @@
+Thao tác enqueue đưa các số nguyên từ 0 đến 9 vào hàng đợi theo đúng thứ tự tăng dần.
+Do tính chất FIFO, bất kể thao tác enqueue và dequeue được xen kẽ như thế nào, phần tử nào vào trước bắt buộc phải ra trước.
+Thứ tự in ra màn hình thông qua lệnh dequeue luôn luôn phải là chuỗi tăng dần (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
+Không có cách nào để lấy số lớn ra trước số nhỏ đã được đưa vào từ trước.
+
+a. 0 1 2 3 4 5 6 7 8 9: Có thể xảy ra (in ra đúng thứ tự)
+b. 4 6 8 7 5 3 2 9 0 1: Không thể xảy ra vì 4 ra trước 0, 1, 2, 3
+c. 2 5 6 7 4 8 9 3 10: Không thể xảy ra vì 2 ra trước 0, 1
+d. 4 3 2 1 0 5 6 7 8 9: Không thể xảy ra vì 4 ra trước 3, 2, 1, 0
+
