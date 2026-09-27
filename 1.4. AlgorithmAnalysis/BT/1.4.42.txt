@@ -1,0 +1,25 @@
+Giả sử ta xét thuật toán ThreeSum (bậc b = 3) và giới hạn thời gian chạy là 1 giờ (3600 giây)
+
+1. B1: Tìm hằng số tốc độ (a) của máy tính
+- Chạy thuật toán với N = 2000. Giả sử đo được thời gian T(2000) = 0.8 giây
+- Tính hằng số a:
+  a = T(2000) / (2000^3) = 0.8 / (8 * 10^9) = 10^(-10)
+
+2. B2: Đảo ngược công thức để tìm N_max
+- Từ công thức gốc: T = a * N^b
+- Suy ra công thức tìm N: N_max = (T / a)^(1/b) (tức là căn bậc b của (T/a))
+
+3. B3: Áp dụng vào thời gian cho phép
+- Thay T = 3600 (giây) và a = 10^(-10) vào công thức:
+  N_max = (3600 / 10^(-10))^(1/3)
+  N_max = (36 * 10^12)^(1/3) = ~33.019
+
+=> Với thuật toán ThreeSum, máy tính chỉ có thể xử lý tối đa khoảng 33.000 phần tử nếu muốn nhận được kết quả trong vòng 1 giờ
+
+Bậc của các thuật toán (Giá trị b)
+Áp dụng công thức tìm N_max ở trên cho từng thuật toán với hệ số b tương ứng:
+- TwoSumFast: b = 1 (do N log N gần tương đương tuyến tính khi ước lượng)
+- TwoSum: b = 2 (căn bậc 2)
+- ThreeSumFast: b = 2 (căn bậc 2)
+- ThreeSum: b = 3 (căn bậc 3)
+

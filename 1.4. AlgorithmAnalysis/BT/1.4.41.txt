@@ -1,0 +1,33 @@
+Giả định phần cứng chuẩn thực thi khoảng 10^9 phép toán/giây
+
+1. Ước tính lý thuyết (Theo độ phức tạp)
+TwoSumFast (O(N log N)):
+- Doubling Ratio: ~2
+- Số phép so sánh: ~2 × 10^7
+- Thời gian: < 0.1 giây (Gần như tức thì)
+
+TwoSum (O(N^2)):
+- Doubling Ratio: ~4
+- Số vòng lặp: ~5 × 10^11
+- Thời gian: ~10 đến 15 phút
+
+ThreeSumFast (O(N^2 log N)):
+- Doubling Ratio: ~4
+- Số phép so sánh: ~2 × 10^13
+- Thời gian: Vài giờ đồng hồ
+
+ThreeSum (O(N^3)):
+- Doubling Ratio: ~8
+- Số vòng lặp: ~1.67 × 10^17
+- Thời gian: ~5.3 năm chạy liên tục
+
+2. Công thức đo lường trên phần cứng thực tế
+Để có con số chính xác trên máy tính của bạn, sử dụng mô hình Doubling Ratio: T(N) = a * N^b (với b là bậc thuật toán, a là hằng số hệ thống)
+
+Ví dụ ước tính thực tế cho ThreeSum (b = 3):
+1. Chạy thử nghiệm mảng nhỏ: Giả sử N = 2000 tốn 0.8 giây.
+2. Tìm hằng số hệ thống (a):
+   a = T(2000) / (2000^3) = 0.8 / (8 * 10^9) = 10^(-10)
+3. Ngoại suy cho 1 triệu số:
+   T(1.000.000) = 10^(-10) * (10^6)^3 = 10^8 giây (khoảng 3.17 năm)
+
