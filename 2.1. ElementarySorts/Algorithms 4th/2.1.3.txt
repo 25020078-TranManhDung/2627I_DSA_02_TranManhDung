@@ -1,0 +1,2 @@
+Mảng gồm N phần tử được sắp xếp theo thứ tự giảm dần
+a = [5, 4, 3, 2, 1]

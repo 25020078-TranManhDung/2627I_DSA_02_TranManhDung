@@ -1,0 +1,19 @@
+Vòng lặp bên trong:
+for (int j = i; j > 0; j--)
+    if (less(a[j], a[j-1]))
+        exch(a, j, j-1);
+    else break;
+
+Hai điều kiện dừng:
+
+1. "j > 0" luôn false khi vòng lặp kết thúc
+- Mảng gồm N phần tử được sắp xếp theo thứ tự giảm dần
+  a = [5, 4, 3, 2, 1]
+- Mỗi phần tử a[i] đều nhỏ hơn các phần tử bên trái, do đó less(a[j], a[j-1]) luôn true.
+Phần tử phải lùi liên tục đến khi j = 0, khiến "j > 0" nhận giá trị false để thoát vòng lặp.
+
+2. "less(a[j], a[j-1])" luôn false khi vòng lặp kết thúc
+- Mảng gồm N phần tử đã sắp xếp theo thứ tự tăng dần (hoặc tất cả phần tử bằng nhau).
+  a = [1, 2, 3, 4, 5], a = [2, 2, 2, 2, 2]
+- Vì mảng đã đúng thứ tự, tại mỗi bước i, phần tử a[i] luôn không nhỏ hơn a[i-1].
+Ở lần lặp đầu tiên của vòng trong (khi j = i), less(a[j], a[j-1]) luôn trả về false và kích hoạt lệnh "break" để kết thúc.

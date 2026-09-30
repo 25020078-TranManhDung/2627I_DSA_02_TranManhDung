@@ -1,0 +1,5 @@
+Selection sort chạy nhanh hơn.
+
+- Selection sort: Mất ~ N^2 / 2 phép so sánh và N phép đổi chỗ (thời gian chạy bậc hai ~ O(N^2)).
+- Insertion sort: Rơi vào trường hợp xấu nhất, mất ~ N^2 / 2 phép so sánh và ~ N^2 / 2 phép đổi chỗ.
+- Cả hai đều mất xấp xỉ N^2 / 2 phép so sánh, nhưng Insertion sort phải thực hiện quá nhiều phép đổi chỗ nên chạy chậm hơn Selection sort.

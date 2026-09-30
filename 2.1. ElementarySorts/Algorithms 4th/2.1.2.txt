@@ -1,0 +1,6 @@
+Tối đa: N lần (hoặc N-1 lần).
+Một phần tử khi chưa về đúng chỗ có thể bị tráo đổi liên tục ở mỗi bước lặp trước khi được đưa về vị trí đích.
+
+Trung bình: <= 2 lần.
+Toàn bộ thuật toán thực hiện đúng N phép đổi chỗ, mỗi phép đổi chỗ tác động lên 2 phần tử (tổng cộng 2N lượt tham gia).
+Chia đều cho N phần tử, một phần tử bất kỳ tham gia trung bình là: 2 lần

@@ -1,0 +1,4 @@
+nsertion sort chạy nhanh hơn.
+
+- Insertion sort: Mất N - 1 phép so sánh và 0 phép đổi chỗ; thời gian chạy ~ O(N) vì less(a[j], a[j-1]) luôn false và break ngay.
+- Selection sort: Vẫn phải duyệt tìm min, mất ~ N^2 / 2 phép so sánh và N phép đổi chỗ; thời gian chạy luôn ~ O(N^2) bất kể dữ liệu đầu vào.

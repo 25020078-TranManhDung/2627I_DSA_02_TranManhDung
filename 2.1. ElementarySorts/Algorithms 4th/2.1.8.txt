@@ -1,0 +1,6 @@
+Thời gian chạy là Bậc hai (~ O(N^2))
+
+- Insertion sort chỉ chạy tuyến tính khi mảng đã sắp xếp một phần (số cặp nghịch thế inversions <= c*N).
+- Với mảng ngẫu nhiên (dù chỉ nhận 3 giá trị, ví dụ: 1, 2, 3), mỗi giá trị xuất hiện trung bình ~ N/3 lần.
+- Số cặp nghịch thế giữa các cặp giá trị khác nhau (như 2 đứng trước 1, 3 đứng trước 2, 3 đứng trước 1) là một hàm tỷ lệ thuận với N^2.
+- Do số phép đổi chỗ của Insertion sort bằng đúng số cặp nghịch thế, thời gian chạy vẫn là bậc hai ~ O(N^2).
