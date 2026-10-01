@@ -1,0 +1,19 @@
+| Kích thước N | (2) Ngẫu nhiên | (3) Sắp xếp xuôi | (4) Sắp xếp ngược | (5) Bằng nhau |
+| 1,000        | 0              | 0                | 0                 | 0             |
+| 4,000        | 1              | 0                | 3                 | 0             |
+| 8,000        | 6              | 0                | 15                | 0             |
+| 16,000       | 28             | 0                | 56                | 0             |
+
+
+
+1. Đánh giá theo dạng dữ liệu (N = 16000):
+- Tốt nhất (0 ms): Dữ liệu "Sắp xếp xuôi" và "Bằng nhau" chạy cực nhanh.
+Lý do là phần tử không cần di chuyển về bên trái, thuật toán chỉ mất đúng N-1 phép so sánh và 0 phép đổi chỗ, đạt độ phức tạp tuyến tính O(N).
+- Trung bình (28 ms): Dữ liệu "Ngẫu nhiên" đại diện cho trường hợp phổ quát, phần tử trung bình chỉ phải lùi về một nửa mảng.
+- Xấu nhất (56 ms): Dữ liệu "Sắp xếp ngược" tốn nhiều thời gian nhất.
+Mỗi phần tử đều phải lùi về tận đầu mảng, thuật toán phải thực hiện tối đa số phép so sánh và đổi chỗ.
+
+2. Đánh giá theo kích thước dữ liệu N:
+- Với dữ liệu "Ngẫu nhiên" và "Sắp xếp ngược": Khi N tăng gấp đôi (4000 -> 8000 -> 16000), thời gian chạy tăng lên xấp xỉ 4 lần.
+Điều này minh chứng rất rõ ràng cho độ phức tạp thời gian bậc hai O(N^2) của thuật toán Insertion Sort trong trường hợp trung bình và xấu nhất.
+- Với dữ liệu "Sắp xếp xuôi" và "Bằng nhau": Thời gian duy trì ở mức 0 ms. Nhờ có cơ chế dừng sớm (break) ở vòng lặp trong, thuật toán giữ được độ phức tạp tuyến tính O(N).

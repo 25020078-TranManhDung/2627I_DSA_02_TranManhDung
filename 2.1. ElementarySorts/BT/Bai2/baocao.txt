@@ -1,0 +1,7 @@
+1. Độ phức tạp tổng quát:
+- Selection Sort: Luôn tốn thời gian bậc hai O(N^2) trong mọi trường hợp (thời gian tăng ~4 lần khi N gấp đôi) do luôn phải quét toàn bộ mảng còn lại để tìm giá trị nhỏ nhất.
+
+2. So sánh chi tiết từng dạng dữ liệu (dựa trên số liệu N = 16000):
+- Ngẫu nhiên: Insertion Sort nhanh hơn Selection Sort nhờ cơ chế dừng lặp sớm khi tìm được vị trí chèn.
+- Sắp xếp xuôi & Bằng nhau: Insertion Sort vượt trội hoàn toàn (O(N) vì không cần đổi chỗ và thoát lặp ngay lập tức. Selection Sort vẫn chậm (O(N^2)) do bắt buộc duyệt tìm min.
+- Sắp xếp ngược: Selection Sort chạy nhanh hơn Insertion Sort do chỉ thực hiện tối đa N phép đổi chỗ. Insertion Sort rơi vào trường hợp xấu nhất, tốn thời gian cho quá nhiều phép đổi chỗ (O(N^2) lần).
