@@ -1,0 +1,11 @@
+Không nên dùng.
+
+Với Selection Sort (Sắp xếp chọn): Không nên
+Thuật toán cần truy xuất ngẫu nhiên để tìm giá trị nhỏ nhất và hoán đổi vị trí (swap) liên tục.
+LinkedList không hỗ trợ truy xuất ngẫu nhiên (lấy phần tử tốn O(N)).
+
+Với Insertion Sort (Sắp xếp chèn):
+- Không nên: Nếu cài đặt bằng cách gọi chỉ số (index), việc lặp đi lặp lại thao tác lấy phần tử thứ i sẽ tiêu tốn thời gian O(N),
+khiến tổng thể thuật toán cực kỳ chậm.
+
+
