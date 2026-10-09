@@ -1,0 +1,23 @@
+1. Cải tiến:
+Trước khi gọi merge(), ta kiện kiểm tra:
+    if (a[mid] <= a[mid+1]) return;
+    merge(a, aux, lo, mid, hi);
+
+2. Chứng minh:
+
+- Khi mảng đã được sắp xếp tăng dần sẵn:
+  + Mọi mảng con đều đã có thứ tự đúng.
+  + Phần tử lớn nhất mảng con trái (a[mid]) luôn nhỏ hơn hoặc bằng phần tử nhỏ nhất mảng con phải (a[mid+1]).
+  + Do đó, điều kiện (a[mid] <= a[mid+1]) LUÔN ĐÚNG ở tất cả các lần gọi.
+  => Hàm merge() bị bỏ qua hoàn toàn, không tốn bất kỳ phép so sánh nào để trộn.
+
+- Đếm số phép so sánh thực hiện:
+  + Phép so sánh duy nhất được chạy là phép kiểm tra: a[mid] <= a[mid+1] (mỗi lần chỉ tốn đúng 1 phép so sánh).
+  + Cây đệ quy của Mergesort chia mảng N phần tử xuống các mảng con kích thước 1, tạo thành một cây nhị phân có đúng N nút lá.
+  + Một cây nhị phân có N nút lá thì luôn có đúng (N - 1) nút bên trong (nút phân nhánh).
+  + Tại mỗi nút bên trong, thuật toán chỉ thực hiện đúng 1 lần so sánh kiểm tra a[mid] <= a[mid+1].
+
+=> Tổng số phép so sánh dùng để sắp xếp mảng là:
+   C(N) = N - 1
+
+Do C(N) = N - 1 tỷ lệ bậc nhất với N, số phép so sánh là TUYẾN TÍNH O(N) (đpcm).

@@ -1,0 +1,35 @@
+1. Công thức đệ quy MergeSort:
+- C(1) = 0
+- C(N) = C(nửa_trái) + C(nửa_phải) + f(N)
+(f(N) là số phép so sánh khi trộn mảng kích thước N, f(N+1) >= f(N))
+
+2. Chứng minh quy nạp
+
+- Cơ sở quy nạp:
+  + N = 1: C(1) = 0, C(2) = 1 => C(2) >= C(1) (đúng)
+  + N = 2: C(2) = 1, C(3) = 3 => C(3) >= C(2) (đúng)
+
+- Giả thiết quy nạp:
+  + Giả sử bất đẳng thức đúng với mọi k < N, tức là: C(k+1) >= C(k)
+
+- Bước quy nạp: Chứng minh C(N+1) >= C(N)
+
+  + Trường hợp 1: N chẵn (đặt N = 2k)
+    C(N)   = 2 * C(k) + f(2k)
+    C(N+1) = C(k) + C(k+1) + f(2k+1)
+    Xét hiệu:
+    C(N+1) - C(N) = [C(k+1) - C(k)] + [f(2k+1) - f(2k)]
+    Vì k < N nên theo giả thiết quy nạp ta có C(k+1) - C(k) >= 0.
+    Đồng thời phép trộn mảng lớn hơn tốn nhiều phép so sánh hơn: f(2k+1) >= f(2k).
+    => C(N+1) - C(N) >= 0  hay  C(N+1) >= C(N).
+
+  + Trường hợp 2: N lẻ (đặt N = 2k - 1)
+    C(N)   = C(k-1) + C(k) + f(2k-1)
+    C(N+1) = 2 * C(k) + f(2k)
+    Xét hiệu:
+    C(N+1) - C(N) = [C(k) - C(k-1)] + [f(2k) - f(2k-1)]
+    Vì k - 1 < N nên theo giả thiết quy nạp ta có C(k) - C(k-1) >= 0.
+    Đồng thời f(2k) >= f(2k-1).
+    => C(N+1) - C(N) >= 0  hay  C(N+1) >= C(N).
+
+=> C(N+1) >= C(N) với mọi N > 0 (đpcm)

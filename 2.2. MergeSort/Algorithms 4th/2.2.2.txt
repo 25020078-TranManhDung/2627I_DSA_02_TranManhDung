@@ -1,0 +1,14 @@
+Chỉ số:                     0   1   2   3   4   5   6   7   8   9  10  11
+Mảng ban đầu:               E   A   S   Y   Q   U   E   S   T   I   O   N
+
+merge(a, aux,  0,  0,  1)   A   E
+merge(a, aux,  0,  1,  2)   A   E   S
+merge(a, aux,  3,  3,  4)               Q   Y
+merge(a, aux,  3,  4,  5)               Q   U   Y
+merge(a, aux,  0,  2,  5)   A   E   Q   S   U   Y
+merge(a, aux,  6,  6,  7)                           E   S
+merge(a, aux,  6,  7,  8)                           E   S   T
+merge(a, aux,  9,  9, 10)                                       I   O
+merge(a, aux,  9, 10, 11)                                       I   N   O
+merge(a, aux,  6,  8, 11)                           E   I   N   O   S   T
+merge(a, aux,  0,  5, 11)   A   E   E   I   N   O   Q   S   S   T   U   Y

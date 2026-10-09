@@ -1,0 +1,27 @@
+1. Top Down
+- Mảng chia đôi thành nửa trái (làm tròn lên) và nửa phải (làm tròn xuống)
+- Các cặp kích thước đem trộn:
+  + (1, 1) -> 2
+  + (2, 1) -> 3
+  + (2, 2) -> 4
+  + (3, 2) -> 5
+  + (5, 4) -> 9
+  + (5, 5) -> 10
+  + (10, 9) -> 19
+  + (10, 10) -> 20
+  + (20, 19) -> 39
+- Kích thước các mảng con sau khi trộn: 2, 3, 4, 5, 9, 10, 19, 20, 39
+- Tổng số lần gọi merge: 38 lần (bằng N - 1)
+
+
+2. Bottom Up
+- Trộn lần lượt theo từng tầng sz = 1, 2, 4, 8, 16, 32
+- Các lần trộn ở từng tầng:
+  + sz =  1: 19 lần trộn (1, 1) -> 2 (dư 1 phần tử lẻ cuối)
+  + sz =  2:  9 lần trộn (2, 2) -> 4 và 1 lần trộn (2, 1) -> 3
+  + sz =  4:  4 lần trộn (4, 4) -> 8 và 1 lần trộn (4, 3) -> 7
+  + sz =  8:  2 lần trộn (8, 8) -> 16 (đoạn 7 đứng chờ)
+  + sz = 16:  1 lần trộn (16, 16) -> 32 (đoạn 7 đứng chờ)
+  + sz = 32:  1 lần trộn (32, 7) -> 39
+- Kích thước các mảng con sau khi trộn: 2, 3, 4, 7, 8, 16, 32, 39
+- Tổng số lần gọi merge: 19 + 10 + 5 + 2 + 1 + 1 = 38 lần
