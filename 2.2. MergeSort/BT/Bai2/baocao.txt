@@ -1,0 +1,10 @@
+| Kích thước N | (2) Ngẫu nhiên | (3) Sắp xếp xuôi | (4) Sắp xếp ngược | (5) Bằng nhau |
+| 1,000        | 0              | 0                | 0                 | 0             |
+| 4,000        | 0              | 0                | 0                 | 0             |
+| 8,000        | 0              | 0                | 0                 | 0             |
+| 16,000       | 0              | 0                | 0                 | 0             |
+
+
+
+- Thời gian chạy ở tất cả các dạng dữ liệu đều ghi nhận mức 0 ms.
+- Thuật toán Mergesort chia để trị một cách cơ học và độc lập với thứ tự của dữ liệu đầu vào. Số phép so sánh và truy cập mảng luôn nằm trong khoảng O(N log N) cho mọi trường hợp.
