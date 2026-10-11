@@ -30,12 +30,12 @@ public class MergeSortSurvey {
         sort(a, aux, 0, a.length - 1);
     }
 
-    public static long timeTrial(int[] original) {
+    public static double timeTrial(int[] original) {
         int[] a = original.clone();
-        long start = System.currentTimeMillis();    // Bắt đầu đo
+        long start = System.nanoTime();
         mergeSort(a);
-        long end = System.currentTimeMillis();      // Kết thúc đo
-        return end - start;
+        long end = System.nanoTime();
+        return (end - start) / 1000000.0;
     }
 
     // (2) Sinh dữ liệu ngẫu nhiên
@@ -74,8 +74,8 @@ public class MergeSortSurvey {
         return a;
     }
 
-    public static long getAverageTime(int[] data, int trials) {
-        long totalTime = 0;
+    public static double getAverageTime(int[] data, int trials) {
+        double totalTime = 0; // Đổi sang double
         for (int i = 0; i < trials; i++) {
             totalTime += timeTrial(data);
         }

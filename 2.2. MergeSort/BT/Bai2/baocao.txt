@@ -1,10 +1,16 @@
 | Kích thước N | (2) Ngẫu nhiên | (3) Sắp xếp xuôi | (4) Sắp xếp ngược | (5) Bằng nhau |
-| 1,000        | 0              | 0                | 0                 | 0             |
-| 4,000        | 0              | 0                | 0                 | 0             |
-| 8,000        | 0              | 0                | 0                 | 0             |
-| 16,000       | 0              | 0                | 0                 | 0             |
+| ------------ | -------------- | ---------------- | ----------------- | ------------- |
+| 1,000        | 0.114 ms       | 0.078 ms         | 0.055 ms          | 0.045 ms      |
+| 4,000        | 0.188 ms       | 0.073 ms         | 0.078 ms          | 0.075 ms      |
+| 8,000        | 0.417 ms       | 0.149 ms         | 0.159 ms          | 0.149 ms      |
+| 16,000       | 0.878 ms       | 0.306 ms         | 0.341 ms          | 0.270 ms      |
 
+- Thời gian File test 4Kints.txt: 0.554 ms
 
-
-- Thời gian chạy ở tất cả các dạng dữ liệu đều ghi nhận mức 0 ms.
-- Thuật toán Mergesort chia để trị một cách cơ học và độc lập với thứ tự của dữ liệu đầu vào. Số phép so sánh và truy cập mảng luôn nằm trong khoảng O(N log N) cho mọi trường hợp.
+Nhận xét:
+- Theo loại dữ liệu: Mảng ngẫu nhiên chạy chậm nhất, trong khi dữ liệu đã có thứ tự (xuôi, ngược, bằng nhau) chạy nhanh hơn.
+Tuy nhiên chênh lệch không lớn, khẳng định tính ổn định của độ phức tạp O(N log N) bất kể trạng thái ban đầu.
+- Theo kích thước (N): Khi N tăng gấp đôi, thời gian chạy tăng nhỉnh hơn 2 lần.
+Tỷ lệ này hoàn toàn khớp với mức tăng trưởng tuyến tính - logarit của O(N log N).
+- So với Insertion Sort: MergeSort vượt trội hoàn toàn thuật toán O(N^2) này (chỉ mất ~0.878 ms cho N=16.000).
+Kích thước N càng lớn, khoảng cách hiệu năng giữa hai thuật toán càng giãn rộng rõ rệt.
