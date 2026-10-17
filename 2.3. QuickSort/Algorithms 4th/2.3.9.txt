@@ -1,0 +1,7 @@
+Bài 2.3.9: Hiện tượng khi mảng chỉ có 2 hoặc 3 giá trị phân biệt
+
+Khi chạy Quicksort chuẩn (phân hoạch 2 chiều) cho mảng có rất ít giá trị phân biệt, thuật toán vẫn mất thời gian O(N log N) thay vì O(N).
+
+Cơ chế dừng con trỏ khi gặp phần tử bằng chốt giúp mảng được chia đôi khá cân bằng (tránh suy biến thành bậc hai). Tuy nhiên, hiện tượng bất lợi là nó sinh ra hàng loạt mảng con chứa toàn các phần tử giống hệt nhau.
+Thuật toán không nhận diện được điều này và vẫn tiếp tục gọi đệ quy, thực hiện phân hoạch một cách vô ích trên các mảng con đã đồng nhất đó cho đến khi kích thước giảm xuống 1.
+

@@ -1,0 +1,7 @@
+Trong thuật toán Quicksort, phần tử lớn nhất M chỉ bị đổi chỗ qua 2 trường hợp:
+
+Trường hợp 1: M không phải là chốt. Con trỏ trái quét gặp M sẽ dừng lại, con trỏ phải gặp phần tử nhỏ hơn chốt sẽ dừng lại. M bị đổi chỗ để ném về nửa bên phải. Sau lần đổi chỗ này, mảng con chứa M (để đệ quy sắp xếp tiếp) sẽ bị thu hẹp đi ít nhất 2 phần tử (loại ra phần tử chốt và phần tử nhỏ vừa hoán đổi).
+
+Trường hợp 2: M được chọn làm chốt. M sẽ bị đổi chỗ đúng 1 lần duy nhất ở cuối hàm phân hoạch để về vị trí chốt cuối cùng, và không bao giờ bị đụng tới nữa.
+
+Vì mỗi lần bị hoán đổi, kích thước mảng bài toán giảm đi ít nhất 2, nên số lần đổi chỗ cộng dồn tối đa là N/2 lần.

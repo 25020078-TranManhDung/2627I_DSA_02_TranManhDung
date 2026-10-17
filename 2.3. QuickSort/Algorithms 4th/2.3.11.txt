@@ -1,0 +1,7 @@
+Nếu hàm phân hoạch được sửa để con trỏ chạy lướt qua (bỏ qua) các phần tử bằng chốt thay vì dừng lại, thuật toán sẽ suy biến thành O(N^2) với mảng có nhiều phần tử trùng lặp.
+Chứng minh:
+1. Khi mảng chỉ có một số lượng hằng số c các giá trị phân biệt, trung bình mỗi giá trị sẽ xuất hiện N/c lần.
+Do c là hằng số, mảng sẽ chứa các khối phần tử trùng lặp rất lớn (kích thước O(N)).
+2. Khi đệ quy duyệt đến một mảng con gồm toàn các phần tử giống hệt nhau, việc "bỏ qua phần tử bằng chốt" sẽ khiến con trỏ trái chạy tuột một mạch đến cuối mảng, trong khi con trỏ phải đứng yên.
+3. Kết quả là mảng luôn bị chia cắt lệch tối đa: một bên 0 phần tử, một bên N-1 phần tử.
+4. Kích thước bài toán giảm đi 1 sau mỗi lần gọi, dẫn đến tổng số phép so sánh là N + (N-1) + (N-2) + ... = O(N^2).

@@ -1,0 +1,5 @@
+Độ sâu gọi đệ quy (tương đương chiều cao của cây đệ quy) trong các trường hợp như sau:
+
+- Trường hợp tốt nhất (Best case): ~ log2(N). Xảy ra khi mảng luôn được phân hoạch chia đôi hoàn hảo thành hai nửa bằng nhau tại mỗi bước đệ quy.
+- Trường hợp tồi nhất (Worst case): N. Xảy ra khi mảng liên tục bị phân hoạch lệch tối đa (thành một mảng kích thước 0 và một mảng kích thước N-1).
+- Trường hợp trung bình (Average case): ~ 2 ln(N) (xấp xỉ 1.39 log2(N)). Khi các phần tử được xáo trộn ngẫu nhiên, các điểm phân hoạch chia mảng theo các tỷ lệ đa dạng nhưng về tổng thể vẫn triệt tiêu lẫn nhau để giữ được cấu trúc cây cân bằng, đảm bảo độ sâu trung bình đạt mức logarit.

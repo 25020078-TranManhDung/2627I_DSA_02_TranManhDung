@@ -1,0 +1,11 @@
+Khi sắp xếp mảng N phần tử phân biệt bằng Quicksort, số lần trung bình thuật toán gọi đệ quy với mảng con kích thước k tuân theo công thức tổng quát:
+P_k(N) = 2(N+1) / ((k+1)(k+2))
+
+- Mảng kích thước 0 (k=0): P_0(N) = 2(N+1) / (1 * 2) = N + 1 (lần).
+- Mảng kích thước 1 (k=1): P_1(N) = 2(N+1) / (2 * 3) = (N + 1) / 3 (lần).
+- Mảng kích thước 2 (k=2): P_2(N) = 2(N+1) / (3 * 4) = (N + 1) / 6 (lần).
+
+Công thức trên được suy ra từ việc giải hệ thức truy hồi của Quicksort. Vì chốt có xác suất 1/N chia mảng thành hai mảng con kích thước j và N-1-j, ta có phương trình kỳ vọng:
+P_k(N) = (2/N) * Tổng[j=0 đến N-1] của P_k(j)
+
+Sử dụng phương pháp khử tổng (nhân 2 vế với N, xét phương trình với N+1 rồi trừ vế theo vế), giải ra được hằng số và thu được công thức tổng quát P_k(N).

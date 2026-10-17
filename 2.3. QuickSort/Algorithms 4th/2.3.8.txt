@@ -1,0 +1,12 @@
+Quicksort sẽ dùng khoảng N log2(N) phép so sánh.
+Trong cài đặt partition chuẩn của thuật toán (sử dụng 2 con trỏ đi ngược chiều), điều kiện quét của hai con trỏ luôn dùng dấu so sánh ngặt ("<" và ">").
+
+Khi mảng gồm N phần tử có giá trị hoàn toàn bằng nhau (và bằng phần tử chốt):
+1. Trạng thái con trỏ: Cả con trỏ trái và con trỏ phải đều sẽ dừng lại ngay lập tức ở mọi phần tử chúng đi qua (vì điều kiện a[i] < v và a[j] > v đều trả về false).
+2. Phân chia hoàn hảo: Do liên tục dừng lại và hoán đổi, hai con trỏ sẽ tịnh tiến đều đặn và luôn gặp nhau ở chính giữa mảng. Phần tử chốt luôn được đặt vào vị trí trung tâm.
+3. Hệ thức truy hồi: Mảng kích thước N luôn bị chia thành 2 nửa cân bằng tuyệt đối (N/2).
+   Chi phí so sánh cho mỗi lần phân hoạch là ~N.
+   Ta có hệ thức: C(N) = 2 * C(N/2) + N.
+4. Giải hệ thức trên cho ra độ phức tạp C(N) ~ N log2(N).
+
+

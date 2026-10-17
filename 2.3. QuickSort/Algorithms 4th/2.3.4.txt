@@ -1,0 +1,21 @@
+Trường hợp xấu nhất (worst-case) tốn nhiều phép so sánh nhất của Quicksort khi không tráo ngẫu nhiên xảy ra khi phần tử được chọn làm chốt (phần tử đầu mảng con) liên tục là giá trị NHỎ NHẤT hoặc LỚN NHẤT trong số các phần tử đang xét.
+Khi đó, mảng luôn bị chia cắt lệch tối đa (một bên 0 phần tử, một bên N-1 phần tử), khiến thuật toán bị suy biến thành O(N^2).
+
+6 mảng độ dài 10:
+Mảng đã sắp xếp tăng dần (chốt luôn là Min ở mỗi bước đệ quy):
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Mảng đã sắp xếp giảm dần (chốt luôn là Max):
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+Số nhỏ nhất ở đầu, phần còn lại giảm dần:
+1, 10, 9, 8, 7, 6, 5, 4, 3, 2
+
+Số lớn nhất ở đầu, phần còn lại tăng dần:
+10, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+Lấy xen kẽ phần tử Min - Max từ ngoài vào trong:
+1, 10, 2, 9, 3, 8, 4, 7, 5, 6
+
+Lấy xen kẽ phần tử Max - Min từ ngoài vào trong:
+10, 1, 9, 2, 8, 3, 7, 4, 6, 5
