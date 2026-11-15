@@ -1,0 +1,64 @@
+N = 7
+Dạng 1: Cây chiều cao 1, gốc là nút 3.
+      ( oo )
+     /  |   \
+   (o) (oo) (oo)
+Dạng 2: Cây chiều cao 2, tất cả đều là nút 2
+        ( o )
+       /     \
+     (o)     (o)
+    /   \   /   \
+  (o)  (o) (o)  (o)
+
+N = 8
+Dạng 1: Cây chiều cao 1, tất cả các nút đều là nút 3
+      ( oo )
+     /  |   \
+  (oo) (oo) (oo)
+Dạng 2: Cây chiều cao 2, một nút lá chuyển thành nút 3.
+        ( o )
+       /     \
+     (o)     (o)
+    /   \   /   \
+ (oo)  (o) (o)  (o)
+
+N = 9
+Dạng 1: Gốc nút 2, hai con nút 2. Hai nút lá là nút 3 tập trung ở cùng một nhánh.
+        ( o )
+       /     \
+     (o)     (o)
+    /   \   /   \
+ (oo) (oo) (o)  (o)
+Dạng 2: Gốc nút 2, hai con nút 2. Hai nút lá là nút 3 chia đều cho mỗi nhánh con.
+        ( o )
+       /     \
+     (o)     (o)
+    /   \   /   \
+ (oo)  (o)(oo)  (o)
+Dạng 3: Gốc nút 2, một con trái là nút 3 (có 3 nhánh) và một con phải là nút 2. Toàn bộ 5 lá đều là nút 2.
+         ( o )
+       /       \
+    (oo)       (o)
+   / |  \     /   \
+ (o)(o)(o)  (o)   (o)
+
+N = 10
+Dạng 1: Gốc nút 2, hai con nút 2. Có ba nút lá là nút 3.
+        ( o )
+       /     \
+     (o)     (o)
+    /   \   /   \
+ (oo)(oo)(oo)  (o)
+Dạng 2: Gốc nút 2, nhánh con trái là nút 3. Nút 3 ở lá nằm dưới nhánh con trái.
+         ( o )
+       /       \
+    (oo)       (o)
+   / |  \     /   \
+(oo)(o)(o)  (o)   (o)
+Dạng 3: Gốc nút 2, nhánh con trái là nút 3. Nút 3 ở lá nằm dưới nhánh con phải.
+         ( o )
+       /       \
+    (oo)       (o)
+   / |  \     /   \
+ (o)(o)(o) (oo)   (o)
+

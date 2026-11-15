@@ -1,0 +1,3 @@
+Chuỗi b (4, 10, 8, 7, 53): Không thể xảy ra vì cây BST này chỉ chứa các số nguyên từ 1 đến 10, khóa 53 hoàn toàn không tồn tại trong cây. Hơn nữa, chuỗi tìm kiếm khóa 5 phải kết thúc tại 5.
+
+Chuỗi d (2, 7, 3, 8, 4, 5): Không hợp lệ. Khi duyệt đến khóa 7, do mục tiêu 5 < 7 nên bắt buộc phải rẽ sang cây con bên trái của 7. Điều này đồng nghĩa với việc mọi khóa được duyệt sau đó đều phải nhỏ hơn 7. Khóa 8 (lớn hơn 7) xuất hiện sau 7 đã vi phạm hoàn toàn tính chất thứ tự đối xứng của BST.

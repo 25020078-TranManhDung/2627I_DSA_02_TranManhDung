@@ -1,0 +1,11 @@
+N = 1, 2, 3, 4, 6:
+- Chỉ có 1 dạng cấu trúc cây duy nhất.
+- Xác suất: 100% (1.0).
+
+N = 5 (Có 2 dạng):
+- Dạng 1 (Gốc nút-2, hai nhánh lá là nút-3): Xảy ra khi 3 khóa đầu tiên chèn vào chứa khóa trung vị. Xác suất = 2/5 (40%).
+- Dạng 2 (Gốc nút-3, ba nhánh lá là nút-2): Trường hợp còn lại (phần bù). Xác suất = 3/5 (60%).
+
+N = 7 (Có 2 dạng):
+- Dạng 1 (Cây cao 2 tầng, toàn bộ là nút-2): Khóa thứ 7 rơi vào nhánh lá đang chứa 2 khóa, gây tách nút dây chuyền. Xác suất = 3/7.
+- Dạng 2 (Cây cao 1 tầng, gồm hai nút-3 và một nút-2): Khóa thứ 7 rơi vào một trong hai nhánh lá đang chứa 1 khóa. Xác suất = 4/7.

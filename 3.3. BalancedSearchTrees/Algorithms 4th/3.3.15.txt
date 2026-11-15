@@ -1,0 +1,15 @@
+              [H]
+            / (đỏ)\
+          [D]     [J]
+         /   \    / \
+       [B]   [F] [I][K]
+       / \   / \
+     [A][C] [E][G]
+
+Hiện tượng tổng quát khi chèn key giảm dần vào cây LLRB:
+
+1. Gắn vào nhánh trái: Nút mới luôn được nối vào cuối nhánh ngoài cùng bên trái.
+2. Xoay phải liên tục: Kích hoạt ngay khi có 2 liên kết đỏ trái liên tiếp để đẩy nút giữa lên làm cha.
+3. Hầu như không xoay trái: Không sinh ra liên kết đỏ nghiêng phải ở tầng đáy khi chèn nút mới.
+4. Đảo màu dây chuyền: Đẩy liên kết đỏ lên tầng trên, kích hoạt xoay phải lan truyền đến tận gốc.
+5. Kết quả: Cây liên tục "gập" các nút từ trái sang phải để lấp đầy không gian, duy trì cân bằng tuyệt đối.

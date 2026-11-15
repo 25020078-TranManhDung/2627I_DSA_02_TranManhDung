@@ -1,0 +1,21 @@
+A
+ \
+  X
+ /
+C
+ \
+  S
+ /
+E
+ \
+  R
+ /
+H
+
+06 thứ tự key cho ra worst-case tree (từ tập {A, C, E, H, R, S, X}):
+Tăng dần liên tục: A, C, E, H, R, S, X (Cây chỉ toàn nhánh phải).
+Giảm dần liên tục: X, S, R, H, E, C, A (Cây chỉ toàn nhánh trái).
+Nhỏ nhất - lớn nhất xen kẽ: A, X, C, S, E, R, H (tạo ra đường zig zag trái - phải).
+Lớn nhất - nhỏ nhất xen kẽ: X, A, S, C, R, E, H.
+Tăng dần 5 key đầu, lấy max rồi min: A, C, E, H, R, X, S.
+Giảm dần 5 key đầu, lấy min rồi max: X, S, R, H, E, A, C.

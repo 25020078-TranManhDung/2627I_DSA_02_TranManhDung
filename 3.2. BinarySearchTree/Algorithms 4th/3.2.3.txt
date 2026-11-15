@@ -1,0 +1,22 @@
+        H
+      /   \
+     C     S
+    / \   / \
+   A   E R   X
+
+Nguyên tắc tạo cây cân bằng hoàn hảo:
+Khóa đầu tiên được chèn vào (nút gốc) bắt buộc phải là phần tử trung vị của tập dữ liệu đã sắp xếp (khóa H).
+Sau đó chỉ cần tuân thủ quy tắc: nút cha luôn phải được chèn trước các nút con tương ứng của nó.
+H phải được chèn trước C và S; C phải chèn trước A và E; S phải chèn trước R và X.
+
+05 thứ tự chèn sinh ra cây tốt nhất
+
+H, C, S, A, E, R, X (Chèn lần lượt theo từng tầng từ trên xuống)
+
+H, C, A, E, S, R, X (Chèn hoàn thiện nhánh trái trước, nhánh phải sau)
+
+H, S, C, X, R, E, A (Chèn hoàn thiện nhánh phải trước, nhánh trái sau)
+
+H, S, R, X, C, A, E
+
+H, C, S, E, A, X, R

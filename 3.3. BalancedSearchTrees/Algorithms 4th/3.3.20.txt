@@ -1,0 +1,25 @@
+Đáp án: (N + 1)(log₂(N + 1) - 2) + 2
+
+Giải thích:
+Với N = 2^k - 1, cây BST là một cây nhị phân hoàn hảo (perfect binary tree) gồm k tầng (từ tầng 0 đến tầng k-1).
+- Tầng 0 có 2^0 nút, độ sâu mỗi nút là 0.
+- Tầng 1 có 2^1 nút, độ sâu mỗi nút là 1.
+- ...
+- Tầng i có 2^i nút, độ sâu mỗi nút là i.
+
+Tổng độ sâu (Internal Path Length - gọi là S) là tổng độ sâu của toàn bộ các nút trên mọi tầng:
+S = 0*2^0 + 1*2^1 + 2*2^2 + ... + (k-1)*2^(k-1)
+
+Để tính tổng này, nhân 2 vế với 2:
+2S = 0*2^1 + 1*2^2 + 2*2^3 + ... + (k-2)*2^(k-1) + (k-1)*2^k
+
+Lấy phương trình dưới trừ đi phương trình trên (2S - S), ta được:
+S = - (2^1 + 2^2 + 2^3 + ... + 2^(k-1)) + (k-1)*2^k
+
+Phần trong ngoặc là tổng cấp số nhân, rút gọn lại thành (2^k - 2):
+S = - (2^k - 2) + (k-1)*2^k
+S = (k - 2)*2^k + 2
+
+Vì N = 2^k - 1 nên ta có 2^k = N + 1 và k = log₂(N + 1).
+Thay ngược lại vào S, ta được công thức tổng quát:
+S = (log₂(N + 1) - 2)(N + 1) + 2

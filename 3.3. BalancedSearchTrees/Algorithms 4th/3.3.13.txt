@@ -1,0 +1,4 @@
+Đáp án: True
+
+Giải thích:
+Khi chèn key theo thứ tự tăng dần, nút mới luôn được nối vào nhánh ngoài cùng bên phải. Các thao tác tái cân bằng (xoay trái, xoay phải, đảo màu) của cây Đỏ Đen chỉ có tác dụng san sẻ bớt nút sang nhánh trái hoặc đẩy nút đỏ lên trên cùng để duy trì cân bằng đen. Quá trình cấu trúc lại này chỉ làm cây phình ra theo chiều ngang hoặc phát triển thêm chiều cao, do đó độ cao tối đa của toàn bộ cây chỉ có thể giữ nguyên hoặc tăng lên, không bao giờ bị giảm.

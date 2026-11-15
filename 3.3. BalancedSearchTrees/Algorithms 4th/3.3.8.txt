@@ -1,0 +1,28 @@
+1. Nút cân bằng
+        [ B ]
+     đỏ /   \ đỏ
+    [ A ]   [ C ]
+2. Nghiêng trái hoàn toàn
+            [ C ]
+         đỏ /
+        [ B ]
+       đỏ /
+      [ A ]
+3. Zig-zag Trái - Phải
+            [ C ]
+         đỏ /
+        [ A ]
+            \ đỏ
+            [ B ]
+4. Nghiêng phải hoàn toàn
+        [ A ]
+          \ đỏ
+          [ B ]
+              \ đỏ
+              [ C ]
+5. Zig-zag Phải - Trái
+        [ A ]
+          \ đỏ
+          [ C ]
+         đỏ /
+        [ B ]

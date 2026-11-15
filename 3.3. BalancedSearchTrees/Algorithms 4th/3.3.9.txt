@@ -1,0 +1,7 @@
+(i) Sai: Không cân bằng đen (số lượng liên kết đen trên đường đi từ gốc đến các nút lá không bằng nhau).
+
+(ii) Sai: Không cân bằng đen (ví dụ: đường đi từ E qua F có ít liên kết đen hơn đường đi từ E qua G).
+
+(iii) Đúng.
+
+(iv) Đúng.

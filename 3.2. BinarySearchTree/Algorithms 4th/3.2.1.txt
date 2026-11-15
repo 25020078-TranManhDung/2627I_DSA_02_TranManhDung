@@ -1,0 +1,37 @@
+          E
+        /   \
+       A     S
+            / \
+           Q   Y
+          /    /
+         I    U
+          \   /
+           O  T
+          /
+         N
+
+E: 0 phép so sánh (cây rỗng, chèn thẳng vào gốc).
+
+A: 1 phép (so với gốc E).
+
+S: 1 phép (so với gốc E).
+
+Y: 2 phép (so với E, S).
+
+Q: 2 phép (so với E, S).
+
+U: 3 phép (so với E, S, Y).
+
+E (cập nhật): 1 phép (so với E, phát hiện trùng khớp).
+
+S (cập nhật): 2 phép (so với E, S, phát hiện trùng khớp).
+
+T: 4 phép (so với E, S, Y, U).
+
+I: 3 phép (so với E, S, Q).
+
+O: 4 phép (so với E, S, Q, I).
+
+N: 5 phép (so với E, S, Q, I, O).
+
+0 + 1 + 1 + 2 + 2 + 3 + 1 + 2 + 4 + 3 + 4 + 5 = 28 phép so sánh.

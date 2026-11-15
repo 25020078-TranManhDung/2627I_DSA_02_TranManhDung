@@ -1,0 +1,5 @@
+Thứ tự tốt nhất: Thêm các key có tần suất tìm kiếm cao nhất vào trước.
+
+Nút được chèn càng sớm thì càng nằm gần gốc cây. Chi phí tìm kiếm tỷ lệ thuận với độ sâu của nút (bằng 1 + độ sâu), nên các key phổ biến nằm gần gốc sẽ giúp tối ưu tổng thời gian tìm kiếm.
+
+Không chèn theo thứ tự tăng dần hay giảm dần vì cây sẽ bị lệch và suy biến thành danh sách liên kết, khiến thời gian tìm kiếm tăng lên mức tồi nhất.

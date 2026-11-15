@@ -1,0 +1,15 @@
+              [H]
+            / (đỏ)\
+          [D]     [J]
+         /   \    / \
+       [B]   [F] [I][K]
+       / \   / \
+     [A][C] [E][G]
+
+Hiện tượng tổng quát khi chèn key tăng dần vào cây LLRB:
+
+1. Gắn vào nhánh phải: Nút mới luôn được nối vào cuối nhánh ngoài cùng bên phải.
+2. Xoay trái liên tục: Kích hoạt ngay lập tức để gạt nút cũ sang trái, ngăn cây bị lệch thành một đường thẳng.
+3. Đảo màu dây chuyền: Đẩy liên kết đỏ lên tầng trên, tiếp tục kích hoạt xoay trái để tự cân bằng hệ thống.
+4. Hiệu ứng băng chuyền: Nhánh phải như một bộ đệm, liên tục nhận khóa lớn và dồn các khóa nhỏ sang trái.
+5. Kết quả: Cây tự động lấp đầy các nút từ trái sang phải ở tầng đáy, duy trì trạng thái cân bằng tuyệt đối.

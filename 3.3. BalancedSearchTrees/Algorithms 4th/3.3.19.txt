@@ -1,0 +1,12 @@
+Đáp án: 2 bit.
+
+Giải thích:
+- Một nút-4 (4-node) chứa tối đa 3 key. Khi mô phỏng bằng cây nhị phân, nó tạo thành một cây con có độ cao 2 (1 gốc, 2 con). Ta cần 2 trạng thái màu (Đen cho gốc để phân tách, Đỏ cho con) nên chỉ cần 1 bit (2^1 = 2 trạng thái).
+
+- Một nút-8 (8-node) chứa tối đa 7 key. Khi mô phỏng bằng cây nhị phân cân bằng hoàn hảo, nó tạo thành một cây con có độ cao 3 (1 gốc, 2 con, 4 cháu).
+- Để thuật toán có thể phân biệt được giới hạn của siêu nút và vị trí các tầng bên trong nó, ta cần 3 trạng thái màu:
+  + Màu 0 (Đen): Đánh dấu nút gốc của siêu nút (liên kết bên ngoài).
+  + Màu 1: Dành cho các nút con (cách gốc 1 cạnh nội bộ).
+  + Màu 2: Dành cho các nút cháu (cách gốc 2 cạnh nội bộ).
+
+- Vì cần sử dụng 3 màu phân biệt, số lượng bit tối thiểu cần thiết là 2 bit (vì 2 bit biểu diễn được tối đa 2^2 = 4 trạng thái).
